@@ -51,4 +51,8 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         await _chatAppDbContext.SaveChangesAsync();
         return entity;
     }
+    public async Task<int> CountAsync()
+    {
+        return await _dbSet.CountAsync();
+    }
 }

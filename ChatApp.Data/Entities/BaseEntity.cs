@@ -1,4 +1,6 @@
-﻿namespace ChatApp.Data.Entities;
+﻿using ChatApp.Data.Repositories.UserRepositories;
+
+namespace ChatApp.Data.Entities;
 public class BaseEntity
 {
     public int Id { get; set; }
