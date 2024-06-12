@@ -5,12 +5,14 @@ using ChatApp.Data.Models;
 using ChatApp.Models;
 using ChatApp.Services.Models.UserModels;
 using ChatApp.Services.Services.UserServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChatApp.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class UsersController : ControllerBase
 {
     private readonly IUserService _userService;

@@ -5,12 +5,14 @@ using ChatApp.Models;
 using ChatApp.Services.Models.GroupModels;
 using ChatApp.Services.Models.MessageModels;
 using ChatApp.Services.Services.GroupServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChatApp.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class GroupsController : ControllerBase
 {
     private readonly IGroupService _groupService;

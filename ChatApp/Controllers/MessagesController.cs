@@ -4,12 +4,14 @@ using ChatApp.Data.Models;
 using ChatApp.Models;
 using ChatApp.Services.Models.MessageModels;
 using ChatApp.Services.Services.MessageServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChatApp.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class MessagesController : ControllerBase
 {
     private readonly IMessageService _messageService;
